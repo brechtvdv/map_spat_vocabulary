@@ -11,9 +11,9 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <https://w3id.org/opentrafficlights> a foaf:Document ;
-                                              foaf:primaryTopic lc:Ontology ;
+                                              foaf:primaryTopic otl:Ontology ;
                                               dct:issued "2018-06-20"^^xsd:date ;
-                                              dct:modified "2018-10-30"^^xsd:date ;
+                                              dct:modified "2018-10-31"^^xsd:date ;
                                               dct:license <http://creativecommons.org/licenses/by/3.0/> .
 
 otl:Ontology a owl:Ontology ;
@@ -47,30 +47,34 @@ otl:arrivalLane a rdf:Property ;
                rdfs:comment "A road user will arrive here"@en ;
                rdfs:domain otl:Connection .
 
-otl:Signalgroup a rdfs:Class ;
+otl:SignalGroup a rdfs:Class ;
               rdfs:label "Signal group"@en ;
-              rdfs:comment "Describes a group of traffic lights by having the same event state."@en .
+              rdfs:comment "Describes a group of traffic lights that have the same Signal state."@en .
               
-otl:EventState a rdfs:Class ;
-              rdfs:label "Event state"@en ;
-              rdfs:comment "Describes the state of a signal group."@en .
+otl:SignalState a rdfs:Class ;
+              rdfs:label "Signal state"@en ;
+              rdfs:comment "Describes the state of a Signal group."@en .
               
-otl:eventState a rdf:Property ;
-               rdfs:label "Event state"@en ;
-               rdfs:comment "Event state of a signal group."@en ;
-               rdfs:domain otl:Signalgroup ;
-               rdfs:range otl:EventState .
-               
+otl:signalState a rdf:Property ;
+               rdfs:label "Signal state"@en ;
+               rdfs:comment "Signal state of a signal group."@en ;
+               rdfs:domain otl:SignalGroup ;
+               rdfs:range otl:SignalState .
+
+otl:signalPhase a rdf:Property ;
+               rdfs:label "Phase of a Signal state"@en ;
+               rdfs:comment "Represents green, red etc. Adviced to use concept scheme https://w3id.org/opentrafficlights/thesauri/signalphase"@en ;
+               rdfs:domain otl:SignalState ;
+               rdfs:range skos:Concept .
+
 otl:minEndTime a rdf:Property ;
                rdfs:label "Minimum end time"@en ;
-               rdfs:comment "The earliest time possible at which the event state could change, except when unpredictable events relating to a pre-emption or priority call disrupt a currently active timing plan.
-"@en ;
-               rdfs:domain otl:EventState ;
+               rdfs:comment "The earliest time possible at which the event state could change, except when unpredictable events relating to a pre-emption or priority call disrupt a currently active timing plan."@en ;
+               rdfs:domain otl:SignalState ;
                rdfs:range xsd:dateTime .
                
 otl:maxEndTime a rdf:Property ;
                rdfs:label "Maximum end time"@en ;
-               rdfs:comment "The latest time possible at which the event state could change, except when unpredictable events relating to a pre-emption or priority call disrupt a currently active timing plan.
-"@en ;
-               rdfs:domain otl:EventState ;
+               rdfs:comment "The latest time possible at which the event state could change, except when unpredictable events relating to a pre-emption or priority call disrupt a currently active timing plan."@en ;
+               rdfs:domain otl:SignalState ;
                rdfs:range xsd:dateTime .
