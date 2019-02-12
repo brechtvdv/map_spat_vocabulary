@@ -45,7 +45,7 @@ _:b0_lane11 a otl:Lane;
     dcterms:description "Nationalestraat".
 
 # SPAT update
-<https://opentrafficlights.org/id/signalgroup/K648/6> rdfs:type otl:Signalgroup.
+<https://opentrafficlights.org/id/signalgroup/K648/6> a otl:Signalgroup.
 
 # Observation for signalgroup <https://opentrafficlights.org/id/signalgroup/K648/6>
 # Its signalstate has signalphase <https://w3id.org/opentrafficlights/thesauri/signalphase/0> which means it's unavailable
