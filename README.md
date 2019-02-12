@@ -26,7 +26,7 @@ Example output:
 @prefix void: <http://rdfs.org/ns/void#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix geo: <http://www.opengis.net/ont/geosparql#>.
-@prefix:dbpedia: <http://dbpedia.org/ontology/>.
+@prefix dbpedia: <http://dbpedia.org/ontology/>.
 @prefix otl: <https://w3id.org/opentrafficlights#>.
 
 # MAP topology
