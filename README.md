@@ -23,6 +23,7 @@ Example output:
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix skos-thes: <http://purl.org/iso25964/skos-thes#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix void: <http://rdfs.org/ns/void#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix geo: <http://www.opengis.net/ont/geosparql#>.
@@ -50,9 +51,11 @@ _:b0_lane11 a otl:Lane;
 # Observation for signalgroup <https://opentrafficlights.org/id/signalgroup/K648/6>
 # Its signalstate has signalphase <https://w3id.org/opentrafficlights/thesauri/signalphase/0> which means it's unavailable
 <https://opentrafficlights.org/spat/K648?time=2018-10-31T14:58:23.205Z> {
-_:b1_b4077 a otl:SignalState;
+    _:b1_b4077 a otl:SignalState;
     otl:signalPhase <https://w3id.org/opentrafficlights/thesauri/signalphase/0>;
     otl:minEndTime "2018-10-31T14:58:37.605Z"^^<http://www.w3.org/2001/XMLSchema#date>;
     otl:maxEndTime "2018-10-31T14:59:40.605Z"^^<http://www.w3.org/2001/XMLSchema#date>.
-<https://opentrafficlights.org/id/signalgroup/K648/6> otl:signalState _:b1_b4077.
+    <https://opentrafficlights.org/id/signalgroup/K648/6> otl:signalState _:b1_b4077.
+}
+<https://opentrafficlights.org/spat/K648?time=2018-10-31T14:58:23.205Z> prov:generatedAtTime "2019-02-14T17:43:54.297Z"^^xsd:date.
 ```
