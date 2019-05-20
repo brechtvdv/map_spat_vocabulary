@@ -34,7 +34,7 @@
     dcterms:identifier 1 ;
     skos:inScheme <https://w3id.org/opentrafficlights/thesauri/signalphase> ;
     skos:prefLabel "Unlit (DARK)"@en ;
-    skos:prefLabel "Onverlicht (DONKER)"@en ;
+    skos:prefLabel "Onverlicht (DONKER)"@nl ;
     skos:note "Stop vehicle at stop line. Do not proceed until it's safe."@en ;
     skos:note "Stop het voertuig aan de stoplijn. Wacht tot het veilig is."@nl .
 
@@ -60,7 +60,6 @@
     skos:prefLabel "Pre-Movement"@en ;
     skos:prefLabel "Voor-vertrek"@nl ;
     skos:note "Stop vehicle. Prepare to proceed."@en ;
-    skos:note "Stop het voertuig. Maak klaar om te vertrekken."@nl ;
     skos:note "Stop het voertuig. Maak klaar om te vertrekken."@nl ;
     skos:editorialNote "Used in the European Union."@en ;
     skos:editorialNote "Van toepassing in Europese Unie."@nl .
