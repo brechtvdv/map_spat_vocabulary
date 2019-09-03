@@ -47,13 +47,19 @@ otl:arrivalLane a rdf:Property ;
                rdfs:comment "A road user will arrive here"@en ;
                rdfs:domain otl:Connection .
 
+otl:signalGroup a rdf:Property ;
+               rdfs:label "signal group"@en ;
+               rdfs:comment "The signal group to which the connection belongs."@en ;
+               rdfs:domain otl:Connection .
+               rdfs:range otl:SignalGroup .
+
 otl:SignalGroup a rdfs:Class ;
               rdfs:label "Signal group"@en ;
-              rdfs:comment "Describes a group of traffic lights that have the same Signal state."@en .
+              rdfs:comment "Describes a group of connections that share the same signal state."@en .
               
 otl:SignalState a rdfs:Class ;
               rdfs:label "Signal state"@en ;
-              rdfs:comment "Describes the state of a Signal group."@en .
+              rdfs:comment "Describes the state of a signal group."@en .
               
 otl:signalState a rdf:Property ;
                rdfs:label "Signal state"@en ;
