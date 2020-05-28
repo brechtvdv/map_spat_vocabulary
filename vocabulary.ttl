@@ -18,7 +18,7 @@
 
 otl:Ontology a owl:Ontology ;
             rdfs:label "The Open Traffic Lights ontology"@en ;
-            rdfs:comment "This ontology provides the terms necessary to describe the status of traffic lights."@en ;
+            rdfs:comment "This ontology provides the terms necessary to describe the status of traffic lights. Created by IDLab (Ghent University - imec)."@en ;
             vann:preferredNamespacePrefix "otl" ;
             vann:preferredNamespaceUri "https://w3id.org/opentrafficlights#" ;
             dct:creator <https://w3id.org/people/brechtvdv/#me> .
